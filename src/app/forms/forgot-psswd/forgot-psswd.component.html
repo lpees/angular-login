@@ -1,0 +1,16 @@
+<div class="mx-auto mt-5 card" style="width: 18rem;">
+  <div class="card-body">
+      <h5 class="card-title">Esqueceu sua senha?</h5>   
+      <h6 class="card-subtitle mb-3 text-muted">Informe o seu email abaixo</h6>
+      
+      <form (submit)="forgotPsswd.sendNewPsswd($event)">
+              <div class="form-group">
+                  <label for="email">E-mail</label>
+                  <input name="email" [(ngModel)]="forgotPsswd.user.email" type="text" id="email" class="form-control form-control-sm" placeholder="Email" required autofocus/>
+              </div>
+
+              <a routerLink="/login" class="card-link">Voltar</a>
+              <button type="submit" class="btn btn-primary btn-sm" style="float: right;">Enviar</button>
+      </form>
+  </div>
+</div>

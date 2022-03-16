@@ -1,0 +1,27 @@
+<app-alert-message></app-alert-message>
+
+<div class="mx-auto mt-5 card" style="width: 35rem;">
+  <div class="card-body">
+      <h5 class="card-title">Reset de senha</h5>   
+      <h6 class="card-subtitle mb-3 text-muted">Preencha as informações abaixo para alterar sua senha</h6>
+      
+      <form (submit)="resetPsswd.updatePsswd($event)">
+              <div class="form-group">
+                  <label for="psswdActually">Senha atual</label>
+                  <input name="psswdActually" [(ngModel)]="resetPsswd.login.psswd" type="password" id="psswdActually" class="form-control form-control-sm" placeholder="Password" required autofocus/>
+              </div>
+              <div class="form-group">
+                  <label for="newPsswd">Nova senha</label>
+                  <input name="newPsswd" [(ngModel)]="resetPsswd.login.newPsswd" type="password" id="newPsswd" class="form-control form-control-sm" placeholder="Password" required />
+              </div>
+              <div class="form-group">
+                  <label for="confirmNewPsswd">Confirme sua nova senha</label>
+                  <input name="confirmPsswd" [(ngModel)]="resetPsswd.login.confirmPsswd" type="password" id="confirmNewPsswd" class="form-control form-control-sm" placeholder="Password" required />
+              </div>
+
+              <button type="submit" style="float:right;" class="btn btn-primary btn-sm">Avançar</button>
+              
+      </form>
+  </div>
+</div>
+

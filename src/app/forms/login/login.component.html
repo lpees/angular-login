@@ -1,0 +1,29 @@
+<app-alert-message></app-alert-message>
+
+<div class="mx-auto mt-5 card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">LAB510</h5>   
+        <h6 class="card-subtitle mb-3 text-muted">Acesse sua conta</h6>
+        
+    <form (submit) ="authentication.sendData($event)">
+                <div class="form-group">
+                    <label for="document">Login</label>
+                    <input name="document" [(ngModel)]="authentication.login.document" type="text" id="document" class="form-control form-control-sm" placeholder="Document" required autofocus/>
+                </div>
+                <div class="form-group">
+                    <label for="psswd">Senha</label>
+                    <input name="psswd" [(ngModel)]="authentication.login.psswd" type="password" id="psswd" class="form-control form-control-sm" placeholder="Password" required />
+                </div>
+            
+                <button type="submit" class="btn btn-primary btn-sm">Entrar</button>
+                <a routerLink="/forgot-psswd" class="card-link" style="float: right;">Esqueceu a senha?</a>
+        </form>
+    </div>
+</div>
+
+<div class="text-center mx-auto mt-1 card" style="width: 18rem;">
+    <div class="card-body">
+        Ainda não possui uma conta?<a routerLink="/register">Inscreva-se</a>
+    </div>    
+</div>
+
